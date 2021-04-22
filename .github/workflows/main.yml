@@ -16,6 +16,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Install dependencies
+        run: npm install
+
       - name: Deploy to Github Pages
         run: npm run deploy
 
