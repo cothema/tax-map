@@ -1,0 +1,15 @@
+.App {
+  h1 {
+    text-align: center;
+  }
+
+  a {
+    color: #444444;
+    font-weight: bolder;
+
+    &:hover {
+      color: #000000;
+    }
+  }
+
+}
