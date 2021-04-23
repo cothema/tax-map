@@ -1,14 +1,18 @@
 .App {
+  padding-top: 56px;
+
   h1 {
     text-align: center;
   }
 
-  a {
-    color: #444444;
-    font-weight: bolder;
+  footer {
+    a {
+      color: #444444;
+      font-weight: bolder;
 
-    &:hover {
-      color: #000000;
+      &:hover {
+        color: #000000;
+      }
     }
   }
 
