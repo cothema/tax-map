@@ -1,0 +1,24 @@
+<div>
+  <div class="bg-dark text-white rounded box-shadow my-3">
+    <app-tax-model-filter></app-tax-model-filter>
+  </div>
+
+  <div class="bg-white shadow-sm p-4 rounded">
+
+    <div *ngFor="let tax of taxRepositoryService.getAll()">
+      <h2>{{tax.title|translate}}</h2>
+
+      <ng-container *ngIf="tax.links?.length">
+        <ul>
+          <li *ngFor="let taxLink of tax.links">
+            <a [href]="taxLink.href" target="_blank" rel="noreferrer">
+              {{taxLink.title|translate}}
+            </a>
+          </li>
+        </ul>
+      </ng-container>
+    </div>
+
+  </div>
+
+</div>

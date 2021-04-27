@@ -1,0 +1,17 @@
+{
+  "app": {
+    "title": "Taxes Map"
+  },
+  "menu": {
+    "home": "Overview",
+    "about": "About"
+  },
+  "tax": {
+    "income": {
+      "title": "Income tax"
+    },
+    "realEstate": {
+      "title": "Real estate tax"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+app-footer {
+  li {
+    padding: 0 0.5em;
+  }
+
+  a {
+    color: #444444;
+    font-weight: bolder;
+
+    &:hover {
+      color: #000000;
+    }
+  }
+
+}

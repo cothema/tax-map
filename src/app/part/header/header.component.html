@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a routerLink="/" class="navbar-brand">
+      <fa-icon [icon]="faHandHoldingUsd"></fa-icon>&nbsp;
+      {{'app.title'|translate}}
+    </a>
+    <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="offcanvas"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a routerLink="/" class="nav-link">
+            {{'menu.home'|translate}}
+          </a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/about" class="nav-link">
+            {{'menu.about'|translate}}
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <select (change)="onChangeLang()" [(ngModel)]="lang" class="form-control"
+            style="display: inline-block;width: auto;margin-left: 0.5em;">
+      <option [ngValue]="'cs'">CZ</option>
+      <option [ngValue]="'en'">EN</option>
+    </select>
+  </div>
+</nav>
