@@ -31,8 +31,8 @@ jobs:
           git config --global user.email "miloshavlicek@gmail.com"
 
       - name: Prepare and deploy
-          env:
-            GITHUB_TOKEN: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          run: |
-            npm run deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        run: |
+          npm run deploy
 
