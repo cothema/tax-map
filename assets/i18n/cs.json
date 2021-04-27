@@ -1,0 +1,17 @@
+{
+  "app": {
+    "title": "Mapa daní"
+  },
+  "menu": {
+    "home": "Přehled",
+    "about": "O aplikaci"
+  },
+  "tax": {
+    "income": {
+      "title": "Daň z příjmu"
+    },
+    "realEstate": {
+      "title": "Daň z nemovitých věcí"
+    }
+  }
+}
