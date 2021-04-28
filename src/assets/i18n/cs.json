@@ -4,14 +4,32 @@
   },
   "menu": {
     "home": "Přehled",
-    "about": "O aplikaci"
+    "about": "O aplikaci",
+    "taxDetail": "Detail daně"
   },
   "tax": {
     "income": {
       "title": "Daň z příjmu"
     },
+    "incomePerson": {
+      "title": "Daň z příjmu fyzických osob"
+    },
+    "incomeCompany": {
+      "title": "Daň z příjmu právnických osob"
+    },
     "realEstate": {
       "title": "Daň z nemovitých věcí"
+    },
+    "valueAdded": {
+      "title": "Daň z přidané hodnoty"
     }
-  }
+  },
+  "taxTag": {
+    "direct": "Přímá daň",
+    "indirect": "Nepřímá daň",
+    "property": "Majetková daň",
+    "person": "Fyzické osoby",
+    "corporate": "Právnické osoby"
+  },
+  "otherSources": "Další zdroje informací"
 }

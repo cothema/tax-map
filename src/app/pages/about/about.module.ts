@@ -4,6 +4,7 @@ import { SharedModule } from '../../shared/shared.module';
 import { AboutComponent } from './about.component';
 
 @NgModule({
+  declarations: [AboutComponent],
   imports: [
     SharedModule,
     RouterModule.forChild([
@@ -13,7 +14,6 @@ import { AboutComponent } from './about.component';
       },
     ]),
   ],
-  declarations: [AboutComponent],
 })
 export class AboutModule {
 }

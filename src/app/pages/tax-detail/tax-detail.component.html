@@ -1,0 +1,36 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">
+      <a href="/">{{'app.title'|translate}}</a>
+    </li>
+    <li aria-current="page" class="breadcrumb-item active">
+      {{'menu.taxDetail'|translate}}
+    </li>
+  </ol>
+</nav>
+
+<div *ngIf="tax" class="bg-white shadow-sm p-4 rounded">
+  <h1>
+    {{tax.title|translate}}
+  </h1>
+
+  <ng-container *ngIf="tax.tags?.length">
+          <span *ngFor="let taxTag of tax.tags" class="badge badge-pill badge-primary mr-2">
+            {{'taxTag.' + taxTag|translate}}
+          </span>
+  </ng-container>
+
+  <ng-container *ngIf="tax.links?.length">
+    <hr/>
+
+    <h3>{{'otherSources'|translate}}</h3>
+
+    <ul>
+      <li *ngFor="let taxLink of tax.links">
+        <a [href]="taxLink.href" rel="noreferrer" target="_blank">
+          {{taxLink.title|translate}}
+        </a>
+      </li>
+    </ul>
+  </ng-container>
+</div>

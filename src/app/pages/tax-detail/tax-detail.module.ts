@@ -1,19 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '../../shared/shared.module';
-import { HomeComponent } from './home.component';
+import { TaxDetailComponent } from './tax-detail.component';
 
 @NgModule({
-  declarations: [HomeComponent],
+  declarations: [
+    TaxDetailComponent
+  ],
   imports: [
     SharedModule,
     RouterModule.forChild([
       {
-        path: '',
-        component: HomeComponent,
+        path: ':id',
+        component: TaxDetailComponent,
       },
     ]),
-  ],
+  ]
 })
-export class HomeModule {
+export class TaxDetailModule {
 }

@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TaxModelFilterComponent } from './tax-model-filter.component';
+import { TaxDetailComponent } from './tax-detail.component';
 
-describe('TaxModelFilterComponent', () => {
-  let component: TaxModelFilterComponent;
-  let fixture: ComponentFixture<TaxModelFilterComponent>;
+describe('TaxDetailComponent', () => {
+  let component: TaxDetailComponent;
+  let fixture: ComponentFixture<TaxDetailComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [TaxModelFilterComponent]
+      declarations: [TaxDetailComponent]
     })
       .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TaxModelFilterComponent);
+    fixture = TestBed.createComponent(TaxDetailComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

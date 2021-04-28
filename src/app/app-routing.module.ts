@@ -12,6 +12,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/about/about.module').then(m => m.AboutModule),
   },
+  {
+    path: 'tax-detail',
+    loadChildren: () =>
+      import('./pages/tax-detail/tax-detail.module').then(m => m.TaxDetailModule),
+  },
 ];
 
 @NgModule({

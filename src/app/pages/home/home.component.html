@@ -3,22 +3,32 @@
     <app-tax-model-filter></app-tax-model-filter>
   </div>
 
-  <div class="bg-white shadow-sm p-4 rounded">
+  <div *ngFor="let tax of taxRepositoryService.getAll()" class="bg-white shadow-sm p-4 rounded mb-4">
+    <h2>
+      <a [routerLink]="'/tax-detail/' + tax.id">
+        {{tax.title|translate}}
+      </a>
+    </h2>
 
-    <div *ngFor="let tax of taxRepositoryService.getAll()">
-      <h2>{{tax.title|translate}}</h2>
+    <ng-container *ngIf="tax.tags?.length">
+          <span *ngFor="let taxTag of tax.tags" class="badge badge-pill badge-primary mr-2">
+            {{'taxTag.' + taxTag|translate}}
+          </span>
+    </ng-container>
 
-      <ng-container *ngIf="tax.links?.length">
-        <ul>
-          <li *ngFor="let taxLink of tax.links">
-            <a [href]="taxLink.href" target="_blank" rel="noreferrer">
-              {{taxLink.title|translate}}
-            </a>
-          </li>
-        </ul>
-      </ng-container>
-    </div>
+    <ng-container *ngIf="tax.links?.length">
+      <hr/>
 
+      <h3>{{'otherSources'|translate}}</h3>
+
+      <ul>
+        <li *ngFor="let taxLink of tax.links">
+          <a [href]="taxLink.href" rel="noreferrer" target="_blank">
+            {{taxLink.title|translate}}
+          </a>
+        </li>
+      </ul>
+    </ng-container>
   </div>
 
 </div>

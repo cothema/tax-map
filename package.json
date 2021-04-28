@@ -6,7 +6,7 @@
     "start": "ng serve --hmr",
     "build": "ng build",
     "predeploy": "npm run build",
-    "deploy": "npm run build && ng deploy --cname=taxes.cothema.com --no-silent",
+    "deploy": "npm run build && ng deploy --cname=taxes.cothema.com",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
