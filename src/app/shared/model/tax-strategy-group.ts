@@ -1,6 +1,5 @@
-import { TaxStrategyTax } from './tax-strategy-tax';
-
-export interface TaxStrategy {
-  title?: string;
-  taxes: TaxStrategyTax[];
+export interface TaxStrategyGroup {
+  title: string;
+  colorText: string;
+  colorBg: string;
 }

@@ -15,9 +15,9 @@
   </h1>
 
   <ng-container *ngIf="tax.tags?.length">
-          <span *ngFor="let taxTag of tax.tags" class="badge badge-pill badge-primary mr-2">
-            {{'taxTag.' + taxTag|translate}}
-          </span>
+    <span *ngFor="let taxTag of tax.tags" class="badge badge-pill badge-primary mr-2">
+      {{'taxTag.' + taxTag|translate}}
+    </span>
   </ng-container>
 
   <ng-container *ngIf="tax.links?.length">

@@ -1,7 +1,10 @@
-import { TaxStrategy } from '../../../../model/tax-strategy';
 import { TaxStrategyTax } from '../../../../model/tax-strategy-tax';
+import { TaxStrategyVersion } from '../../../../model/tax-strategy-version';
+import { AncapExtreme } from '../ancap-extreme';
 
-export class AncapExtreme1 implements TaxStrategy {
+export class AncapExtreme1 implements TaxStrategyVersion {
+  title = 'taxStrategy.ideology.ancap.extreme.1.title';
+  parent = new AncapExtreme();
   taxes: TaxStrategyTax[] = [
     {
       taxId: '1',

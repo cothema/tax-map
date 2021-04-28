@@ -1,0 +1,23 @@
+<span [ngSwitch]="trend">
+  <span *ngSwitchCase="'higher'" class="badge badge-pill badge-danger">
+    <fa-icon [icon]="faArrowUp"></fa-icon>
+  </span>
+  <span *ngSwitchCase="'equal'" class="badge badge-pill badge-warning">
+    <fa-icon [icon]="faArrowRight"></fa-icon>
+  </span>
+  <span *ngSwitchCase="'yes'" class="badge badge-pill badge-warning">
+    <fa-icon [icon]="faCheck"></fa-icon>
+  </span>
+  <span *ngSwitchCase="'lower'" class="badge badge-pill badge-success">
+    <fa-icon [icon]="faArrowDown"></fa-icon>
+  </span>
+  <span *ngSwitchCase="'no'" class="badge badge-pill badge-primary">
+    <fa-icon [icon]="faTimes"></fa-icon>
+  </span>
+  <span *ngSwitchCase="'unknown'" class="badge badge-pill badge-light">
+    <fa-icon [icon]="faQuestion"></fa-icon>
+  </span>
+  <span *ngSwitchDefault class="badge badge-pill badge-light">
+    <fa-icon [icon]="faQuestion"></fa-icon>
+  </span>
+</span>

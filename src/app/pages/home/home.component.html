@@ -5,26 +5,7 @@
 
   <div *ngFor="let tax of taxes" class="bg-white shadow-sm p-4 rounded mb-4">
     <h2>
-      <span [ngSwitch]="tax.trend" class="mr-2">
-        <span *ngSwitchCase="'higher'" class="badge badge-pill badge-danger">
-          <fa-icon [icon]="faArrowUp"></fa-icon>
-        </span>
-        <span *ngSwitchCase="'equal'" class="badge badge-pill badge-warning">
-          <fa-icon [icon]="faArrowRight"></fa-icon>
-        </span>
-        <span *ngSwitchCase="'yes'" class="badge badge-pill badge-warning">
-          <fa-icon [icon]="faCheck"></fa-icon>
-        </span>
-        <span *ngSwitchCase="'unknown'" class="badge badge-pill badge-light">
-          <fa-icon [icon]="faQuestion"></fa-icon>
-        </span>
-        <span *ngSwitchCase="'lower'" class="badge badge-pill badge-success">
-          <fa-icon [icon]="faArrowDown"></fa-icon>
-        </span>
-        <span *ngSwitchCase="'no'" class="badge badge-pill badge-primary">
-          <fa-icon [icon]="faTimes"></fa-icon>
-        </span>
-      </span>
+      <app-tax-trend [trend]="tax.trend" class="mr-2"></app-tax-trend>
 
       <a [routerLink]="'/tax-detail/' + tax.id">
         {{tax.title|translate}}
@@ -35,20 +16,6 @@
           <span *ngFor="let taxTag of tax.tags" class="badge badge-pill badge-primary mr-2">
             {{'taxTag.' + taxTag|translate}}
           </span>
-    </ng-container>
-
-    <ng-container *ngIf="tax.links?.length">
-      <hr/>
-
-      <h3>{{'otherSources'|translate}}</h3>
-
-      <ul>
-        <li *ngFor="let taxLink of tax.links">
-          <a [href]="taxLink.href" rel="noreferrer" target="_blank">
-            {{taxLink.title|translate}}
-          </a>
-        </li>
-      </ul>
     </ng-container>
   </div>
 

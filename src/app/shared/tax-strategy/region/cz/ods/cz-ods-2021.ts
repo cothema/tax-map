@@ -1,7 +1,10 @@
-import { TaxStrategy } from '../../../../model/tax-strategy';
 import { TaxStrategyTax } from '../../../../model/tax-strategy-tax';
+import { TaxStrategyVersion } from '../../../../model/tax-strategy-version';
+import { CzOds } from '../cz-ods';
 
-export class CzOds2021 implements TaxStrategy {
+export class CzOds2021 implements TaxStrategyVersion {
+  title = 'taxStrategy.region.cz.ods.2021.title';
+  parent = new CzOds();
   taxes: TaxStrategyTax[] = [
     {
       taxId: '1',

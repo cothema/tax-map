@@ -1,5 +1,7 @@
 import { TaxStrategyGroup } from '../../../model/tax-strategy-group';
 
-export class CzOds implements TaxStrategyGroup {
-  title = 'taxStrategy.region.cz.ods._title';
+export class AncapExtreme implements TaxStrategyGroup {
+  title = 'taxStrategy.ideology.ancap.extreme._title';
+  colorText = '#ffff00';
+  colorBg = '#000000';
 }
