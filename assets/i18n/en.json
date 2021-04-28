@@ -4,14 +4,32 @@
   },
   "menu": {
     "home": "Overview",
-    "about": "About"
+    "about": "About",
+    "taxDetail": "Tax detail"
   },
   "tax": {
     "income": {
       "title": "Income tax"
     },
+    "incomePerson": {
+      "title": "Personal income tax"
+    },
+    "incomeCompany": {
+      "title": "Corporate income tax"
+    },
     "realEstate": {
       "title": "Real estate tax"
+    },
+    "valueAdded": {
+      "title": "Value added tax"
     }
-  }
+  },
+  "taxTag": {
+    "direct": "Direct tax",
+    "indirect": "Indirect tax",
+    "property": "Property tax",
+    "person": "Personal tax",
+    "corporate": "Corporate tax"
+  },
+  "otherSources": "Other sources of information"
 }
