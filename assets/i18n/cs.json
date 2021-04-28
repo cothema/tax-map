@@ -11,10 +11,10 @@
     "income": {
       "title": "Daň z příjmu"
     },
-    "incomePerson": {
+    "incomePersonal": {
       "title": "Daň z příjmu fyzických osob"
     },
-    "incomeCompany": {
+    "incomeCorporate": {
       "title": "Daň z příjmu právnických osob"
     },
     "realEstate": {
@@ -28,8 +28,44 @@
     "direct": "Přímá daň",
     "indirect": "Nepřímá daň",
     "property": "Majetková daň",
-    "person": "Fyzické osoby",
+    "personal": "Fyzické osoby",
     "corporate": "Právnické osoby"
   },
-  "otherSources": "Další zdroje informací"
+  "otherSources": "Další zdroje informací",
+  "btn": {
+    "compare": "Porovnat",
+    "addToCompare": "Přidat k porovnání",
+    "close": "Zavřít",
+    "add": "Přidat"
+  },
+  "page": {
+    "about": {
+      "title": "O aplikaci Mapa daní"
+    }
+  },
+  "taxStrategy": {
+    "region": {
+      "cz": {
+        "ods": {
+          "_title": "ODS",
+          "2021": {
+            "title": "Volby 2021"
+          }
+        }
+      }
+    },
+    "ideology": {
+      "ancap": {
+        "extreme": {
+          "_title": "Anarchokapitalismus",
+          "1": {
+            "title": "Bez daní"
+          }
+        }
+      }
+    }
+  },
+  "_": {
+    "tax": "Daň"
+  }
 }

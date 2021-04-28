@@ -11,10 +11,10 @@
     "income": {
       "title": "Income tax"
     },
-    "incomePerson": {
+    "incomePersonal": {
       "title": "Personal income tax"
     },
-    "incomeCompany": {
+    "incomeCorporate": {
       "title": "Corporate income tax"
     },
     "realEstate": {
@@ -28,8 +28,44 @@
     "direct": "Direct tax",
     "indirect": "Indirect tax",
     "property": "Property tax",
-    "person": "Personal tax",
+    "personal": "Personal tax",
     "corporate": "Corporate tax"
   },
-  "otherSources": "Other sources of information"
+  "otherSources": "Other sources of information",
+  "btn": {
+    "compare": "Compare",
+    "addToCompare": "Add to compare",
+    "close": "Close",
+    "add": "Add"
+  },
+  "page": {
+    "about": {
+      "title": "About Tax Map"
+    }
+  },
+  "taxStrategy": {
+    "region": {
+      "cz": {
+        "ods": {
+          "_title": "ODS",
+          "2021": {
+            "title": "2021 Elections"
+          }
+        }
+      }
+    },
+    "ideology": {
+      "ancap": {
+        "extreme": {
+          "_title": "Anarchokapitalism",
+          "1": {
+            "title": "Without taxes"
+          }
+        }
+      }
+    }
+  },
+  "_": {
+    "tax": "Daň"
+  }
 }
