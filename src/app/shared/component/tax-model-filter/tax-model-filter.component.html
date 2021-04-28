@@ -44,5 +44,22 @@
 
       <div class="col-1 text-left"></div>
     </div>
+    <div class="form-row">
+      <div class="col pt-4 px-5">
+        <input (change)="onFilterChanged()" [(ngModel)]="filterTags.personal" id="filter-personal" name="filter-person"
+               type="checkbox">
+        <label for="filter-personal">&nbsp;{{'taxTag.personal'|translate}}</label>
+        &nbsp;
+        <input (change)="onFilterChanged()" [(ngModel)]="filterTags.corporate" id="filter-corporate"
+               name="filter-corporate" type="checkbox">
+        <label for="filter-corporate">&nbsp;{{'taxTag.corporate'|translate}}</label>
+      </div>
+      <div class="col-2  pt-3 ">
+        <a (click)="onCompare()" class="btn btn-light">
+          <fa-icon [icon]="faBalanceScale"></fa-icon>
+          {{'btn.compare'|translate}}
+        </a>
+      </div>
+    </div>
   </form>
 </div>

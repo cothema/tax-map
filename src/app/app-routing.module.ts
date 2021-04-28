@@ -17,6 +17,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/tax-detail/tax-detail.module').then(m => m.TaxDetailModule),
   },
+  {
+    path: 'tax-strategy-compare',
+    loadChildren: () =>
+      import('./pages/tax-strategy-compare/tax-strategy-compare.module').then(m => m.TaxStrategyCompareModule),
+  },
 ];
 
 @NgModule({

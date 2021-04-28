@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
+import { faBalanceScale } from '@fortawesome/free-solid-svg-icons/faBalanceScale';
 
 @Component({
   selector: 'app-tax-model-filter',
@@ -7,10 +9,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TaxModelFilterComponent implements OnInit {
 
-  constructor() {
+  @Output() filterTagsChanged = new EventEmitter<{
+    personal?: boolean,
+    corporate?: boolean
+  }>();
+
+  filterTags = {
+    personal: true,
+    corporate: true
+  };
+  faBalanceScale = faBalanceScale;
+
+  constructor(
+    private router: Router
+  ) {
   }
 
   ngOnInit(): void {
   }
 
+  onFilterChanged(): void {
+    this.filterTagsChanged.emit(this.filterTags);
+  }
+
+  onCompare(): void {
+    console.log('55');
+    this.router.navigate(['/tax-strategy-compare']);
+  }
 }

@@ -10,8 +10,16 @@ export class TaxRepositoryService {
   }
 
   getById(id: string): Tax | undefined {
-    console.log(id);
     return this.getAll().find(tax => tax.id === id);
+  }
+
+  getByTags(tags: string[]): Tax[] {
+    console.log(tags);
+    if (!tags.length) {
+      return this.getAll();
+    }
+
+    return this.getAll().filter(tax => tax.tags && tax.tags.filter(taxTag => tags.includes(taxTag)).length);
   }
 
   getAll(): Tax[] {
@@ -22,12 +30,12 @@ export class TaxRepositoryService {
         sub: [
           {
             id: '4',
-            title: 'tax.incomePerson.title',
-            tags: ['direct', 'person']
+            title: 'tax.incomePersonal.title',
+            tags: ['direct', 'personal']
           },
           {
             id: '5',
-            title: 'tax.incomeCompany.title',
+            title: 'tax.incomeCorporate.title',
             tags: ['direct', 'corporate']
           }
         ],
@@ -43,7 +51,7 @@ export class TaxRepositoryService {
             lang: 'cs'
           }
         ],
-        tags: ['direct', 'corporate', 'person', 'property']
+        tags: ['direct', 'corporate', 'personal', 'property']
       },
       {
         id: '3',
