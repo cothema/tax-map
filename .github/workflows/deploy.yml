@@ -32,7 +32,7 @@ jobs:
 
       - name: Prepare and deploy
         env:
-          GITHUB_TOKEN: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GH_DEPLOY_KEY }}
         run: |
           npm run deploy
 
