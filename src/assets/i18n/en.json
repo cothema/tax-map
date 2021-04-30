@@ -5,7 +5,9 @@
   "menu": {
     "home": "Overview",
     "about": "About",
-    "taxDetail": "Tax detail"
+    "taxDetail": "Tax detail",
+    "calculator": "Calculator",
+    "calculatorTaxIncomePersonal": "Personal Income Tax"
   },
   "tax": {
     "income": {
@@ -67,5 +69,8 @@
   },
   "_": {
     "tax": "Daň"
+  },
+  "taxParams": {
+    "grossWage": "Gross wage"
   }
 }

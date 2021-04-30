@@ -1,0 +1,33 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">
+      <a href="/">{{'app.title'|translate}}</a>
+    </li>
+    <li aria-current="page" class="breadcrumb-item active">
+      {{'menu.calculatorTaxIncomePersonal'|translate}}
+    </li>
+  </ol>
+</nav>
+
+<div class="bg-white shadow-sm p-4 rounded">
+  <h2>
+    {{'menu.calculatorTaxIncomePersonal'|translate}}
+  </h2>
+
+  <form>
+    <div class="row border rounded p-3 mb-4" style="max-width: 600px;">
+      <div class="col text-right font-weight-bold">
+        {{'taxParams.grossWage'|translate}}:
+      </div>
+      <div class="col">
+        <input class="form-control" type="number">
+      </div>
+    </div>
+  </form>
+
+  <div class="row">
+    <div *ngFor="let strategy of strategies" class="col">
+      <h3>{{strategy.parent.title|translate}}: {{strategy.title|translate}}</h3>
+    </div>
+  </div>
+</div>

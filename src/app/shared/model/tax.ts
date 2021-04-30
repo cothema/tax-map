@@ -5,6 +5,7 @@ export interface Tax {
   id: string;
   title: string;
   links?: Link[];
+  parent?: Tax;
   sub?: Tax[];
   tags?: string[];
 }

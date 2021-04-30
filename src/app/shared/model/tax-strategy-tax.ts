@@ -1,4 +1,6 @@
+import { Tax } from './tax';
+
 export interface TaxStrategyTax {
-  taxId: string;
+  tax: Tax;
   trend: 'higher' | 'equal' | 'yes' | 'unknown' | 'lower' | 'no';
 }

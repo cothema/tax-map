@@ -19,11 +19,15 @@ export class TaxDetailComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    const taxId = this.route.snapshot.paramMap.get('id');
+    this.route.params.subscribe(
+      params => {
+        const taxId = params['id'];
 
-    if (taxId) {
-      this.tax = this.taxRepositoryService.getById(taxId);
-    }
+        if (taxId) {
+          this.tax = this.taxRepositoryService.getById(taxId);
+        }
+      }
+    );
   }
 
 }

@@ -10,16 +10,15 @@ export class TaxRepositoryService {
   }
 
   getById(id: string): Tax | undefined {
-    return this.getAll().find(tax => tax.id === id);
+    return this.findByIdRecursively(this.getAll(), id);
   }
 
   getByTags(tags: string[]): Tax[] {
-    console.log(tags);
     if (!tags.length) {
       return this.getAll();
     }
 
-    return this.getAll().filter(tax => tax.tags && tax.tags.filter(taxTag => tags.includes(taxTag)).length);
+    return this.getAll().filter(tax => tax.tags && tax.tags.filter(taxTag => tags.includes(taxTag)).length === tags.length);
   }
 
   getAll(): Tax[] {
@@ -66,5 +65,23 @@ export class TaxRepositoryService {
         tags: ['indirect']
       }
     ];
+  }
+
+  private findByIdRecursively(taxes: Tax[], id: string, i = 0): Tax | undefined {
+    for (const tax of taxes) {
+      if (tax.id === id) {
+        return tax;
+      }
+
+      if (tax.sub && tax.sub.length) {
+        const subOut = this.findByIdRecursively(tax.sub, id, ++i);
+        if (subOut) {
+          subOut.parent = tax;
+          return subOut;
+        }
+      }
+    }
+
+    return undefined;
   }
 }

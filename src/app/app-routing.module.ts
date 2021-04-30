@@ -22,6 +22,16 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/tax-strategy-compare/tax-strategy-compare.module').then(m => m.TaxStrategyCompareModule),
   },
+  {
+    path: 'calculators',
+    children: [
+      {
+        path: 'tax-income-personal',
+        loadChildren: () =>
+          import('./pages/calc/calc-income-tax-personal/calc-income-tax-personal.module').then(m => m.CalcIncomeTaxPersonalModule),
+      },
+    ]
+  },
 ];
 
 @NgModule({

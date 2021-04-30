@@ -16,6 +16,19 @@
             {{'menu.home'|translate}}
           </a>
         </li>
+        <li class="nav-item dropdown" ngbDropdown>
+          <a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" id="dropdown01"
+             ngbDropdownToggle>
+            {{'menu.calculator'|translate}}
+          </a>
+          <ul aria-labelledby="dropdown01" class="dropdown-menu" ngbDropdownMenu>
+            <li>
+              <a class="dropdown-item" routerLink="/calculators/tax-income-personal">
+                {{'menu.calculatorTaxIncomePersonal'|translate}}
+              </a>
+            </li>
+          </ul>
+        </li>
         <li class="nav-item">
           <a class="nav-link" routerLink="/about">
             {{'menu.about'|translate}}

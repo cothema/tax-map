@@ -33,7 +33,6 @@ export class TaxModelFilterComponent implements OnInit {
   }
 
   onCompare(): void {
-    console.log('55');
     this.router.navigate(['/tax-strategy-compare']);
   }
 }

@@ -10,13 +10,15 @@ import { CzOds2021 } from '../../shared/tax-strategy/region/cz/ods/cz-ods-2021';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  strategy: TaxStrategyVersion = new CzOds2021();
+  strategy?: TaxStrategyVersion;
   taxes?: Tax[];
   filterTags: string[] = [];
 
   constructor(
     private taxRepositoryService: TaxRepositoryService,
+    czOds2021: CzOds2021
   ) {
+    this.strategy = czOds2021;
   }
 
   ngOnInit(): void {
@@ -24,7 +26,6 @@ export class HomeComponent implements OnInit {
   }
 
   onFilterByTags(tags: any): void {
-    console.log(tags);
     this.filterTags = [];
 
     if (tags.personal) {
@@ -40,11 +41,14 @@ export class HomeComponent implements OnInit {
 
   loadTaxes(): void {
     this.taxes = this.taxRepositoryService.getByTags(this.filterTags);
-    this.taxes.forEach(tax => {
-      const strategyTax = this.strategy.taxes.find(strategyTaxEl => strategyTaxEl.taxId === tax.id);
 
-      if (strategyTax) {
-        tax.trend = strategyTax.trend;
+    this.taxes.forEach(tax => {
+      if (this.strategy !== undefined) {
+        const strategyTax = this.strategy.taxes.find(strategyTaxEl => strategyTaxEl.tax.id === tax.id);
+
+        if (strategyTax) {
+          tax.trend = strategyTax.trend;
+        }
       }
     });
   }

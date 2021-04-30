@@ -17,17 +17,20 @@ import { CzOds2021 } from '../../shared/tax-strategy/region/cz/ods/cz-ods-2021';
 export class TaxStrategyCompareComponent implements OnInit {
 
   taxes?: Tax[];
-  strategies: TaxStrategyVersion[] = [
-    new CzOds2021(),
-    new AncapExtreme1()
-  ];
+  strategies: TaxStrategyVersion[] = [];
   faPlus = faPlus;
   faCheck = faCheck;
 
   constructor(
     private modalService: NgbModal,
-    private taxRepositoryService: TaxRepositoryService
+    private taxRepositoryService: TaxRepositoryService,
+    czOds2021: CzOds2021,
+    ancapExtreme1: AncapExtreme1
   ) {
+    this.strategies.push(
+      czOds2021,
+      ancapExtreme1
+    );
   }
 
   ngOnInit(): void {
@@ -39,6 +42,6 @@ export class TaxStrategyCompareComponent implements OnInit {
   }
 
   findTaxInStrategy(taxId: string, strategy: TaxStrategyVersion): TaxStrategyTax | undefined {
-    return strategy.taxes.find(tax => tax.taxId === taxId);
+    return strategy.taxes.find(tax => tax.tax.id === taxId);
   }
 }

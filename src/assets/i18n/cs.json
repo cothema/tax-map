@@ -5,7 +5,9 @@
   "menu": {
     "home": "Přehled",
     "about": "O aplikaci",
-    "taxDetail": "Detail daně"
+    "taxDetail": "Detail daně",
+    "calculator": "Kalkulačka",
+    "calculatorTaxIncomePersonal": "Daň z příjmu FO"
   },
   "tax": {
     "income": {
@@ -67,5 +69,8 @@
   },
   "_": {
     "tax": "Daň"
+  },
+  "taxParams": {
+    "grossWage": "Hrubá mzda"
   }
 }

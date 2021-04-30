@@ -14,6 +14,23 @@
     {{tax.title|translate}}
   </h1>
 
+  <div *ngIf="tax.parent">
+    <b>Kategorie:</b>&nbsp;
+    <a [routerLink]="'/tax-detail/' + tax.parent.id"
+       class="badge badge-pill badge-dark">
+      {{tax.parent.title|translate}}
+    </a>
+  </div>
+
+  <div *ngIf="tax.sub && tax.sub.length">
+    <b>Zahrnuje daně:</b>&nbsp;
+    <a *ngFor="let taxSub of tax.sub"
+       [routerLink]="'/tax-detail/' + taxSub.id"
+       class="badge badge-pill badge-dark mr-2">
+      {{taxSub.title|translate}}
+    </a>
+  </div>
+
   <ng-container *ngIf="tax.tags?.length">
     <span *ngFor="let taxTag of tax.tags" class="badge badge-pill badge-primary mr-2">
       {{'taxTag.' + taxTag|translate}}
